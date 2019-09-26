@@ -41,18 +41,27 @@ salve seu arquivo e o apt estara funcionando, para usar ele sem proxy basta come
 #quanto a git hub:
 
 -------ativar o proxy:
+
 git config --global http.proxy http://192.168.43.1:44355
+
 -----desativar o proxy:
+
 git config --global --unset http.proxy http://192.168.43.1:44355
 
 -----------------------------------------------
 #Quanto a conexoes externas ssh
+
 Criar um documento dentro de .ssh chamado config e inserir co codigo abaixo:
+
 ProxyCommand /usr/bin/ncat --proxy-type http --proxy 192.168.43.1:44355 %h %p
+
 -------ativar desativar o proxy: 
+
 $sudo gedit .ssh/config     
+
 remover ou colocar o sustenido na frente do codigo que puxa o ssh da net vivo
 do http injector:
+
 #ProxyCommand /usr/bin/ncat --proxy-type http --proxy 192.168.43.1:44355 %h %p
 
 -----------------------------------------------
@@ -60,15 +69,22 @@ do http injector:
 Quanto ao snap
 
 ---crie ou edite o arquivo:
-      sudo gedit /etc/systemd/system/snapd.service.d/http-proxy.conf
+
+$ sudo gedit /etc/systemd/system/snapd.service.d/http-proxy.conf
 ---Adicione as linhas:
+
 [Service]
 Environment="http_proxy=http://192.168.43.1:44355/"
 ---crie ou edite o arquivo:
-      sudo gedit /etc/systemd/system/snapd.service.d/https-proxy.conf
+
+sudo gedit /etc/systemd/system/snapd.service.d/https-proxy.conf
+
 ---Adicione as linhas:
+
 [Service]
 Environment="https_proxy=http://192.168.43.1:44355/"
+
 --reinicie os serviços:
+
      sudo systemctl daemon-reload
      sudo systemctl restart snapd
