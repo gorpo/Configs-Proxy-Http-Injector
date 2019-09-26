@@ -56,7 +56,8 @@ do http injector:
 #ProxyCommand /usr/bin/ncat --proxy-type http --proxy 192.168.43.1:44355 %h %p
 
 -----------------------------------------------
-##Quanto ao snap
+-----------------------------------------------
+Quanto ao snap
 
 ---crie ou edite o arquivo:
       sudo gedit /etc/systemd/system/snapd.service.d/http-proxy.conf
@@ -71,5 +72,3 @@ Environment="https_proxy=http://192.168.43.1:44355/"
 --reinicie os serviços:
      sudo systemctl daemon-reload
      sudo systemctl restart snapd
------------------------------------------------
-Em breve mais proxys para uso do http injector conforme demanda de minhas necessidades no computador
