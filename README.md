@@ -46,11 +46,21 @@ salve seu arquivo e o apt estara funcionando, para usar ele sem proxy basta come
 #quanto a git hub:
 
 -------ativar o proxy:
-
 git config --global http.proxy http://192.168.43.1:44355
-
 -----desativar o proxy:
+Editar o arquivo .gitconfig com:
+   sudo nano .gitconfig
 
+As linhas sem proxy ficam:
+Edit .gitconfig file (Probably in your home directory of the user ~) and change the http and https proxy fields to space only
+
+[http]
+    proxy = 
+[https]
+    proxy = 
+
+
+---ou tentar:
 git config --global --unset http.proxy http://192.168.43.1:44355
 
 -----------------------------------------------
