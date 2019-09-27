@@ -1,5 +1,10 @@
-# Configs-Proxy-Http-Injector-
+# Configs-Proxy-Http-Injector
 Configuraçoes Proxy Http Injector  para uso no pc linux
+
+
+[![Stage](https://img.shields.io/badge/Release-Stable-brightgreen.svg)]()
+[![Build](https://img.shields.io/badge/Supported_OS-Linux-orange.svg)]()
+
 
 Este git é de uso pessoal e para interessados em configurar seu proxy para usar via WIFI com o compartilhamento Tethering do HTTP Injector.
 
